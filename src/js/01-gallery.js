@@ -9,15 +9,13 @@ const galleryEl = document.querySelector('.gallery');
 
 const galleryMarkup = galleryItems
   .map(({ preview, original, description }) => {
-    return `<li class="gallery__item">
-  <a class="gallery__link" href="${original}">
+    return `<a class="gallery__item" href="${original}">
     <img
       class="gallery__image"
       src="${preview}"
       alt="${description}"
     />
-  </a>
-</li>`;
+  </a>`;
   })
   .join('');
 console.log(galleryMarkup);
