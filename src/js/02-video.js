@@ -11,7 +11,7 @@ const handleCurrentTime = el => {
   localStorage.setItem(STORAGE_KEY, el.seconds);
 };
 
-player.on('timeupdate', throttle(handleCurrentTime), 1000);
+player.on('timeupdate', throttle(handleCurrentTime, 1000));
 
 function setCurrentTime() {
   if (localStorage.getItem(STORAGE_KEY)) {
